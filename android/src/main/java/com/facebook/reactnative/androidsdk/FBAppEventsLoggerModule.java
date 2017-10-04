@@ -205,4 +205,32 @@ public class FBAppEventsLoggerModule extends ReactContextBaseJavaModule {
     public void setPushNotificationsRegistrationId(String registrationId) {
         AppEventsLogger.setPushNotificationsRegistrationId(registrationId);
     }
+
+	/**
+     * Register userId used in Graph API requests
+     * @param userId Custom user id from app
+     */
+	@ReactMethod
+    public void setUserID(String userId) {
+        mAppEventLogger.setUserID(userId);
+    }
+
+	/**
+     * Clears the currently set user id.
+     */
+	@ReactMethod
+    public void clearUserID() {
+        mAppEventLogger.clearUserID();
+    }
+
+	/**
+     * Set custom user properties
+	 * @param parameters Arbitrary additional information for describing this event. This should
+     *                   have no more than 24 entries, and keys should be mostly consistent from
+     *                   one purchase event to the next.
+     */
+	@ReactMethod
+   	public void updateUserProperties(@Nullable ReadableMap parameters) {
+        mAppEventLogger.updateUserProperties(parameters);
+    }
 }
