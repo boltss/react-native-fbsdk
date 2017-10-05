@@ -231,6 +231,6 @@ public class FBAppEventsLoggerModule extends ReactContextBaseJavaModule {
      */
 	@ReactMethod
    	public void updateUserProperties(@Nullable ReadableMap parameters) {
-        mAppEventLogger.updateUserProperties(Arguments.toBundle(parameters));
+        mAppEventLogger.updateUserProperties(Arguments.toBundle(parameters), null);
     }
 }
