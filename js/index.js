@@ -30,7 +30,6 @@ exports.ShareOpenGraphValueContainer = require('./models/FBShareOpenGraphValueCo
 //native modules
 exports.AccessToken = require('./FBAccessToken');
 exports.AppEventsLogger = require('./FBAppEventsLogger');
-console.log('Wiikael', exports.AppEventsLogger);
 exports.AppInviteDialog = require('./FBAppInviteDialog');
 exports.GameRequestDialog = require('./FBGameRequestDialog');
 exports.GraphRequest = require('./FBGraphRequest');
