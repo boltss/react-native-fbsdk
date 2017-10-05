@@ -104,4 +104,25 @@ module.exports = {
     AppEventsLogger.setPushNotificationsRegistrationId(registrationId);
   },
 
+   /**
+    * Set user id
+    */
+  setUserID(userId: string) {
+    AppEventsLogger.setUserID(userId);
+  },
+
+   /**
+    * Clear user id
+    */
+  clearUserID() {
+    AppEventsLogger.clearUserID();
+  },
+
+   /**
+    * Clear user id
+    */
+  updateUserProperties(params: Object) {
+    AppEventsLogger.updateUserProperties(params);
+  },
+
 };
