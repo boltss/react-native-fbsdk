@@ -80,14 +80,9 @@ RCT_EXPORT_METHOD(setPushNotificationsDeviceToken:(NSString *)deviceToken)
   [FBSDKAppEvents setPushNotificationsDeviceToken:[RCTConvert NSData:deviceToken]];
 }
 
-RCT_EXPORT_METHOD(logPushNotificationOpen:(NSDictionary *)payload)
-{
-    [FBSDKAppEvents logPushNotificationOpen:payload];
-}
-
 RCT_EXPORT_METHOD(clearUserID)
 {
-    [FBSDKAppEvents clearUserID];
+    [FBSDKAppEvents setUserID:nil];
 }
 
 RCT_EXPORT_METHOD(setUserID:(NSString *)userId)
@@ -97,9 +92,9 @@ RCT_EXPORT_METHOD(setUserID:(NSString *)userId)
 
 RCT_EXPORT_METHOD(updateUserProperties:(NSDictionary *)parameters)
 {
-    [FBSDKAppEvents updateUserProperties:parameters];
+    [FBSDKAppEvents updateUserProperties:parameters
+                                 handler:nil];
 }
-
 
 
 @end
